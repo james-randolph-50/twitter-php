@@ -51,7 +51,7 @@ if(isset($_POST['register_button'])){
             $em = filter_var($em, FILTER_VALIDATE_EMAIL);
 
             //Check if email already exists
-            $e_check = mysqli_query($con, "SELECT  email FROM users WHERE email='$em'");
+            $e_check = mysqli_query($con, "SELECT email FROM users WHERE email='$em'");
 
             // Count number of rows returned
             $num_rows = mysqli_num_rows($e_check);
@@ -92,7 +92,7 @@ if(isset($_POST['register_button'])){
 
             // Generate username
             $username = strtolower($fname . "_" . $lname);
-            $check_username_query = mysqli_query($con, "SELECT username FROM users WHERE username='$username");
+            $check_username_query = mysqli_query($con, "SELECT username FROM users WHERE username='$username'");
 
             $i = 0;
             // If username exists, add number to username
@@ -101,6 +101,17 @@ if(isset($_POST['register_button'])){
                 $username = $username . "_" . $i;
                 $check_username_query = mysqli_query($con, "SELECT username FROM users WHERE username='$username'");
             }
+
+            //Profile picture assignment
+            $rand = rand(1, 2);
+
+            if($rand == 1)
+                $profile_pic = "assets/images/profile_pics/defaults/head_deep_blue.png";
+            else if($rand == 2)
+                $profile_pic = "assets/images/profile_pics/defaults/head_emerald.png";
+
+
+                $query = mysqli_query($con, "INSERT INTO users VALUES (NULL, '$fname', '$lname','$username','$em','$password', '$date', '$profile_pic', '0', '0', 'no', ',')");
         }
 
     }
