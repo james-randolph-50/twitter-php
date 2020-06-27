@@ -112,6 +112,8 @@ if(isset($_POST['register_button'])){
 
 
                 $query = mysqli_query($con, "INSERT INTO users VALUES (NULL, '$fname', '$lname','$username','$em','$password', '$date', '$profile_pic', '0', '0', 'no', ',')");
+
+                array_push($error_array, "<span style='color: #14C800;'>You're all set! Go ahead and login!</span>");
         }
 
     }
@@ -164,6 +166,9 @@ if(isset($_POST['register_button'])){
         else if(in_array("Your password can only contain english characters or numbers<br>", $error_array)) echo("Your password can only contain english characters or numbers<br>");
         else if(in_array("Your password must be between 5 and 30 characters<br>", $error_array)) echo("Your password must be between 5 and 30 characters<br>"); ?>
         <input type="submit" name="register_button" value="Register">
+        <br>
+
+        <? if(in_array("<span style='color: #14C800;'>You're all set! Go ahead and login!</span>", $error_array)) echo("<span style='color: #14C800;'>You're all set! Go ahead and login!</span>"); ?>
 
     </form>
 
