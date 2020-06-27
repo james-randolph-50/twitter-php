@@ -1,6 +1,7 @@
 <? 
 require 'config/config.php';
 require 'includes/form_handlers/register_handler.php';
+require 'includes/form_handlers/login_handler.php';
 ?>
 
 <html>
@@ -10,9 +11,16 @@ require 'includes/form_handlers/register_handler.php';
 <body>
 
     <form action="register.php" method="POST">
-        <input type="email" name="log_email" placeholder="Email Address"><br>
+        <input type="email" name="log_email" placeholder="Email Address" value="<? 
+        if(isset($_SESSION['reg_fname'])) {
+            echo($_SESSION['reg_fname']);
+        }
+        ?>" required>
+        <br>
         <input type="password" name="log_password" placeholder="Password"><br>
         <input type="submit" name="login_button" value="Login">
+        <br>
+        <? if(in_array("Email or password was incorrect<br>", $error_array)) echo("Email or password was incorrect<br>"); ?>
     </form>
     
     <form action="register.php" method="POST">
