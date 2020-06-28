@@ -205,3 +205,17 @@ nav a:hover {
 .profile_info p {
     margin-left:1em;
 }
+
+.danger {background: #e74c3c;}
+.warning {background: #f0ad4e;}
+.default{background: #bdc3c7;}
+.success {background: #2ecc71;}
+.info {background: #3498db;}
+
+.profile_left input[type="submit"] {
+    width:90%;
+    height: 30px;
+    border: none;
+    margin:7px 0;
+    color:#fff;
+}
