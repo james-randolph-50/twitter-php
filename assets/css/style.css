@@ -65,3 +65,27 @@ nav a:hover {
     display: inline-block;
     position: absolute;
 }
+
+.user_details img {
+    height: 125px;
+    margin-right:4px;
+}
+
+.main_column {
+    float:right;
+    width: 60%;
+    z-index: -1;
+    min-height: 160px;
+}
+
+.post_form {
+    width: 100%;
+}
+
+.post_form textarea {
+    width: 80%;
+    height: 3em;
+    margin-right: 4px;
+    border: 1px solid #D3D3D3;
+    font-size:1em;
+}
