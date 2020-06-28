@@ -136,13 +136,17 @@
             }
 
             $user_obj = new User($con, $posted_by);
+
+            ?> <div class="comment_section">
+                    <a href="<?echo($posted_by);?>" target="_parent"><img src="<?echo($user_obj->getProfilePic());?>" title="<?echo($posted_by)?>" style="float:left;" height="30" /></a>
+                    <a href="<?echo($posted_by);?>" target="_parent"><strong><? echo($user_obj->getFirstAndLastName()); ?></strong></a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<? echo($time_message)  . "<br>" . $comment_body; ?>
+                    <hr>
+                </div> 
+<?
         }
     }
 ?>
-
-<div class="comment_section">
-    <a href="<?echo($posted_by);?>" target="_parent">Testing</a>
-</div>
 
 
 </body>
