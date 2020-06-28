@@ -38,4 +38,5 @@ else {
         <a href="#">Home</a>
     </nav>
 </div>
-    
+
+<div class="wrapper"><!-- closed in index -->    
