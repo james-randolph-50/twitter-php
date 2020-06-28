@@ -25,7 +25,16 @@ class Post {
                 $user_to = "none";
             }
 
+            // insert post to db
+            $query = mysqli_query($this->con, "INSERT INTO posts VALUES(NULL,'$body', '$added_by','$user_to', '$date_added','no','no', '0')");
+            $returned_id = mysqli_insert_id($this->con);
 
+            // insert notification
+
+            //Update post count for user
+            $num_posts = $this->user_obj->getNumPosts();
+            $num_posts++;
+            $update_query = mysqli_query($this->con, "UPDATE users SET num_posts='$num_posts' WHERE username='$added_by'");
 
         }
     }

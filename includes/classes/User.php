@@ -13,6 +13,13 @@ class User {
         return $this->user['username'];
     }
 
+    public function getNumPosts() {
+        $username = $this->user['username'];
+        $query = mysqli_query($this->con, "SELECT num_posts FROM users WHERE username='$username'");
+        $row = mysqli_fetch_array($query);
+        return $row['num_posts'];
+    }
+
     public function getFirstAndLastName() {
         $username = $this->user['username'];
         $query = mysqli_query($this->con, "SELECT first_name, last_name FROM users WHERE username='$username'");
