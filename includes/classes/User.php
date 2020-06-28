@@ -51,6 +51,6 @@ class User {
     }
 
 
-}
+} // end class
 
 ?>
