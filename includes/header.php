@@ -29,7 +29,7 @@ else {
     </div>
 
     <nav>
-        <a href="#">
+        <a href="<? echo($userLoggedIn); ?>">
             <? echo($user['first_name']); ?>
         </a>
         <a href="index.php">Home</a>

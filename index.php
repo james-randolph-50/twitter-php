@@ -2,10 +2,10 @@
 include("includes/header.php");
 ?>
     <div class="user_details column">
-            <a href="#"> <img src="<? echo $user['profile_pic'];?>" /></a>
+            <a href="<? echo($userLoggedIn); ?>"> <img src="<? echo $user['profile_pic'];?>" /></a>
 
             <div class="user_details_left_right">
-            <a href="#">
+            <a href="<? echo($userLoggedIn); ?>">
             <?
                 echo($user['first_name'] . " " . $user['last_name']);
             ?></a>

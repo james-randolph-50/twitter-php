@@ -88,4 +88,20 @@ nav a:hover {
     margin-right: 4px;
     border: 1px solid #D3D3D3;
     font-size:1em;
+    padding:.5em;
+}
+
+.post_form input[type="submit"] {
+    width: 10%;
+    height: 60px;
+    border: none;
+    background: purple;
+    color: #fff;
+    position: absolute;
+    margin: 0;
+    font-size:1.5em;
+}
+
+.post_form input[type="submit"]:active {
+    background: lightpink;
 }
