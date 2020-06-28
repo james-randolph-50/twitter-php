@@ -72,12 +72,16 @@ class Post {
                     ?>
                     <script>
                         function toggle<?echo($id);?>() {
-                            var element = document.getElementById("toggleComment<?echo($id);?>");
 
-                            if(element.style.display == "block") {
-                                element.style.display = "none";
-                            } else {
-                                element.style.display = "block";
+                            var target = $(event.target);
+                                if (!target.is("a")) {
+                                    var element = document.getElementById("toggleComment<?echo($id);?>");
+
+                                    if(element.style.display == "block") {
+                                        element.style.display = "none";
+                                    } else {
+                                        element.style.display = "block";
+                                    }
                             }
                         }
                     </script>
