@@ -157,3 +157,24 @@ nav a:hover {
     color:green;
     border: none;
 }
+
+.newsfeedPostOptions iframe {
+    border: 0px;
+    height: 17px;
+    width: 120px;
+}
+
+
+.comment_like {
+    padding:0;
+    color:purple;
+    font-size:1em;
+    border:none;
+    height:auto;
+    width:auto;
+}
+
+.like_value {
+    display:inline;
+    font-size:1em
+}
