@@ -164,7 +164,6 @@ nav a:hover {
     width: 120px;
 }
 
-
 .comment_like {
     padding:0;
     color:purple;
@@ -177,4 +176,32 @@ nav a:hover {
 .like_value {
     display:inline;
     font-size:1em
+}
+
+.profile_left {
+    top:-10px;
+    width:17%;
+    max-width: 240px;
+    min-width: 130px;
+    height: 100%;
+    float:left;
+    position: relative;
+    background: palegreen;
+    border-right:5px solid purple;
+    margin-right:20px;
+}
+
+.profile_left img {
+    min-width: 80px;
+    width: 55%;
+    margin: 20px;
+}
+
+.profile_info {
+    width:100%;
+    padding:10px 0;
+}
+
+.profile_info p {
+    margin-left:1em;
 }
