@@ -35,7 +35,7 @@ else {
         <a href="index.php">Home</a>
         <a href="#">Messages</a>
         <a href="#">Settings</a>
-        <a href="#">Home</a>
+        <a href="includes/handlers/logout.php">Logout</a>
     </nav>
 </div>
 
