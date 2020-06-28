@@ -31,7 +31,7 @@ if(isset($_POST['post'])){
         </form>
 
         <div class="posts_area"></div>
-        <img id="#loading" src="assets/images/icons/loading.png" alt="loading icon">
+        <img id="loading" src="assets/images/icons/loading.png" alt="loading icon">
 
     </div>
 
