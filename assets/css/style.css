@@ -117,3 +117,22 @@ nav a:hover {
     float:left;
     margin-right:.5em;
 }
+
+#comment_iframe {
+    max-height:250px;
+    width: 100%;
+}
+
+.comment_section {
+    padding:0 5px 5px 5px;
+}
+.comment_section img {
+    margin: 0 4px 4px 4px;
+}
+
+#comment_form textarea {
+    border-color: #d3d3d3;
+    width:85%;
+    height:35px;
+    margin: 5px;
+}
