@@ -10,7 +10,7 @@ class Post {
 
     public function loadPostsFriends($data, $limit) {
 
-        $page = data['page'];
+        $page = $data['page'];
         $userLoggedIn  = $this->user_obj->getUsername();
 
         if($page == 1)
@@ -145,6 +145,15 @@ class Post {
                         <hr>";
 
             }
+
+            if($count > $limit) {
+                $str .= "<input type='hidden' class='nextPage' value='" . ($page + 1) . "'>
+                        <input type='hidden' class='noMorePosts' value='false'>";
+            }
+            else {
+                $str .= "<input type='hidden' class='noMorePosts' value='true'><p style='text-align: center;'>No more posts to show</p>";
+            }
+
     }
 
         echo($str);
