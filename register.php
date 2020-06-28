@@ -7,9 +7,11 @@ require 'includes/form_handlers/login_handler.php';
 <html>
 <head>
 <title>Welcome to Basically Twitter</title>
+<link rel="stylesheet" type="text/css" href="assets/css/register_style.css">
 </head>
 <body>
 
+<div class="wrapper">
     <form action="register.php" method="POST">
         <input type="email" name="log_email" placeholder="Email Address" value="<? 
         if(isset($_SESSION['reg_fname'])) {
@@ -68,6 +70,6 @@ require 'includes/form_handlers/login_handler.php';
         <? if(in_array("<span style='color: #14C800;'>You're all set! Go ahead and login!</span>", $error_array)) echo("<span style='color: #14C800;'>You're all set! Go ahead and login!</span>"); ?>
 
     </form>
-
+</div>
 </body>
 </html>
