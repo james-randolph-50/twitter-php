@@ -105,3 +105,15 @@ nav a:hover {
 .post_form input[type="submit"]:active {
     background: lightpink;
 }
+
+.status_post {
+    width:95%;
+    font-size:1.5em;
+    padding: 0 .5em;
+    min-height: 75px;
+}
+
+.post_profile_pic {
+    float:left;
+    margin-right:4px;
+}
