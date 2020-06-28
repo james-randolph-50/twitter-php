@@ -3,6 +3,8 @@ require 'config/config.php';
 
 if(isset($_SESSION['username'])) {
     $userLoggedIn = $_SESSION['username'];
+    $user_details_query = mysqli_query($con, "SELECT * FROM users WHERE username='$userLoggedIn'");
+    $user = mysqli_fetch_array($user_details_query);
 }
 else {
     header("Location: register.php");
@@ -25,5 +27,15 @@ else {
     <div class="logo">
         <a href="index.php">Twitter</a>
     </div>
+
+    <nav>
+        <a href="#">
+            <? echo($user['first_name']); ?>
+        </a>
+        <a href="index.php">Home</a>
+        <a href="#">Messages</a>
+        <a href="#">Settings</a>
+        <a href="#">Home</a>
+    </nav>
 </div>
     

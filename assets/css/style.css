@@ -18,3 +18,20 @@
 .logo a:hover {
     text-decoration: none;
 }
+
+nav {
+    float: right;
+    right: 1px;
+    position: absolute;
+    margin:10px;
+}
+nav a {
+    position: relative;
+    color:#fff;
+    text-decoration: none;
+    font-size:1.2em;
+}
+
+nav a:hover {
+    border-bottom: 7px solid #fff;
+}
