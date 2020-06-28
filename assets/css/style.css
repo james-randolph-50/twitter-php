@@ -1,3 +1,5 @@
+body {background:#f1f1f1;}
+
 .top_bar {
     width: 100%;
     min-width:1050px;
@@ -111,6 +113,7 @@ nav a:hover {
     font-size:1.5em;
     padding: 0 .5em;
     min-height: 75px;
+    cursor: pointer;
 }
 
 .post_profile_pic {
@@ -121,6 +124,7 @@ nav a:hover {
 #comment_iframe {
     max-height:250px;
     width: 100%;
+    margin-top:5px;
 }
 
 .comment_section {
@@ -135,4 +139,21 @@ nav a:hover {
     width:85%;
     height:35px;
     margin: 5px;
+}
+#comment_form input[type="submit"] {
+    border:none;
+    background: purple;
+    color: white;
+    width:13%;
+    height: 35px;
+    margin-top:4px;
+    position: absolute;
+
+}
+
+.newsfeedPostOptions {
+    padding: 0px;
+    text-decoration: none;
+    color:green;
+    border: none;
 }

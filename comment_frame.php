@@ -1,10 +1,3 @@
-<html>
-<head> 
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-</head>
-
-<body>
-
 <? 
     require 'config/config.php';
     include("includes/classes/User.php");
@@ -19,6 +12,13 @@
         header("Location: register.php");
     }
 ?>
+
+<html>
+<head> 
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
 
 <script>
     function toggle() {
@@ -145,6 +145,9 @@
                 </div> 
 <?
         }
+    }
+    else {
+        echo("<center><br><br>No Comments to Show.</center>");
     }
 ?>
 
