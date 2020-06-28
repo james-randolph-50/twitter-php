@@ -8,6 +8,28 @@ class Post {
         $this->user_obj = new User($con, $user);
     }
 
+    public function loadPostsFriends() {
+        $str = ""; //string to return
+        $data = mysqli_query($this->con, "SELECT * FROM posts WHERE deleted='no' ORDER BY id DESC");
+
+        while($row  = mysqli_fetch_array($data)) {
+            $id = $row['id'];
+            $body = $row['body'];
+            $added_by = $row['added_by'];
+            $date_time = $row['date_added'];
+
+            //Prepare suer_to string so it can be included even if not posted to a user
+            if($row['user_to'] == "none") {
+                $user_to = "";
+            }
+            else {
+                $user_to_obj = new User($con, $row['user_to']);
+                $user_to_name = $user_to_obj->getFirstAndLastName();
+                $user_to = "<a href='" . $row['user_to'] . "'>" . $user_to_name  . "</a>";
+            }
+        }
+    }
+
     public function submitPost($body, $user_to) {
         $body = strip_tags($body); // removes html tags
         $body = mysqli_real_escape_string($this->con, $body);
