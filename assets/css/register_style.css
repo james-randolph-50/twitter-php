@@ -1,7 +1,42 @@
-form {
-    text-align:center;
-}
+form {text-align:center;}
 
 body {margin: 0; padding: 0;}
 
 .wrapper { background: orange;width:100%;height:100%;}
+
+.login_box {
+    position: relative;
+    margin: 0 auto;
+    top: 10%;
+    width:35%;
+    background: #fff;
+    border-left:10px solid greenyellow;
+    padding:1em;
+    text-align: center;
+}
+
+input[type="submit"] {
+    background: greenyellow;
+    padding: 5px 10px;
+    margin: .8em 0;
+    border:none;
+    font-size:1em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    border: 1px solid gray;
+    margin-top:.4em;
+    width: 70%;
+    height: 2em;
+    margin-bottom:.5em;
+    padding-left:8px;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover {
+    border: 3px solid blue;
+}
+
