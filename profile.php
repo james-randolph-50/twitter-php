@@ -1,5 +1,7 @@
 <?
 include("includes/header.php");
+include("includes/classes/User.php");
+include("includes/classes/Post.php");
 
 if(isset($_GET['profile_username'])) {
     $username = $_GET['profile_username'];
@@ -25,6 +27,29 @@ if(isset($_GET['profile_username'])) {
             <p><? echo("Likes: " . $user_array['num_likes']);?></p>
             <p><? echo("Friends: " . $num_friends);?></p>
         </div>
+
+        <form action="<?echo($username);?>">
+            <? 
+                $profile_user_obj = new User($con, $username); 
+            
+                if($profile_user_obj->isClosed()) {
+                    header("Location: user_closed.php");
+                }
+
+                $logged_in_user_obj = new User($con, $userLoggedIn);
+                
+                if($userLoggedIn != $username) {
+
+                    if($logged_in_user_obj->isFriend($username)) {
+                        echo('<input type="submit" name="remove_friend" class="danger" value="Remove Friend"><br>');
+                    }
+
+
+                }
+
+            
+            ?>
+        </form>
     </div>
 
     <div class="main_column column">
