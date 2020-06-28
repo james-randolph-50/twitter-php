@@ -1,12 +1,7 @@
-<? 
-require 'config/config.php';
+<?
+include("includes/header.php");
 ?>
-
-
-<html>
-<head>
-<title>Twitter</title></head>
-<body>
 Hey there php twitter
+
 </body>
 </html>
