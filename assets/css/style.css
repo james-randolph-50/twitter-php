@@ -7,3 +7,14 @@
     border-bottom: .25em solid green;
     display: inline-flex;
 }
+
+.logo a {
+    font-size:2em;
+    margin-left:1em;
+    position: relative;
+    top: 9px;
+}
+
+.logo a:hover {
+    text-decoration: none;
+}
