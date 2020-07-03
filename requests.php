@@ -37,8 +37,8 @@ include("includes/header.php");
 
             ?>
                 <form action="requests.php" method="POST">
-                    <input type="submit" name="accept_request<? echo($user_from);?>" id="accept_button" value="Accept">
-                    <input type="submit" name="ignore_request<? echo($user_from);?>" id="ignore_button" value="Ignore">
+                    <input type="submit" name="accept_request <? echo($user_from);?>" id="accept_button" value="Accept">
+                    <input type="submit" name="ignore_request <? echo($user_from);?>" id="ignore_button" value="Ignore">
                 </form>
             <?
         } // end while
