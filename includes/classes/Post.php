@@ -217,7 +217,7 @@ class Post {
     
 }
 
-public function loadProfilesPosts($data, $limit) {
+public function loadProfilePosts($data, $limit) {
 
     $page = $data['page'];
     $profileUser = $data['profileUsername'];
@@ -356,7 +356,7 @@ public function loadProfilesPosts($data, $limit) {
                             </div>
 
                             <div class='posted_by' style='color:#ACACAC;'>
-                                <a href='$added_by'>$first_name $last_name </a> $user_to &nbsp;&nbsp;&nbsp;$time_message
+                                <a href='$added_by'>$first_name $last_name </a>&nbsp;&nbsp;&nbsp;$time_message
                                 $delete_button
                             </div>
 

@@ -77,8 +77,9 @@ if(isset($_GET['profile_username'])) {
 
     </div>
 
-    <div class="main_column column">
-       <? echo($username); ?>
+    <div class="profile_main_column column">
+    <div class="posts_area"></div>
+        <img id="loading" src="assets/images/icons/loading.png" alt="loading icon">
 
     </div>
 
