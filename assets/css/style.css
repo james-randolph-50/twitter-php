@@ -229,3 +229,12 @@ nav a:hover {
 
 #ignore_button {background: #e74c3c;}
 #accept_button {background: #2ecc71;}
+
+.delete_button {
+    height:1.5em;
+    width:1.5em;
+    padding: 0;
+    float:right;
+    right:-15px;
+    position: relative;
+}
