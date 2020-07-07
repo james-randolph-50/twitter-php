@@ -10,6 +10,9 @@ $(document).ready(function() {
             success: function(msg) {
                 $("#post_form").modal('hide');
                 location.reload();
+            },
+            error: function() {
+                alert('Failure');
             }
         });
 
