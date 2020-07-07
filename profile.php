@@ -112,6 +112,57 @@ if(isset($_GET['profile_username'])) {
   </div>
 </div>
 
+<script>
+        var userLoggedIn = '<? echo($userLoggedIn); ?>';
+        var profileUsername = '<? echo $username ?>';
+
+        $(document).ready(function() {
+            $('#loading').show();
+
+            // Original ajax request for loading first posts
+            $.ajax({
+                url: "includes/handlers/ajax_load_profile_posts.php",
+                type: "POST",
+                data: "page=1&userLoggedIn=" + userLoggedIn + "&profileUsername=" + profileUsername,
+                cache: false,
+
+                success: function(data){
+                    $('#loading').hide();
+                    $('.posts_area').html(data);
+                }
+            });
+
+            $(window).scroll(function() {
+                var height = $('.posts_area').height(); // div containing posts
+                var scroll_top = $(this).scrollTop();
+                var page = $('.posts_area').find('.nextPage').val();
+                var noMorePosts = $('.posts_area').find('.noMorePosts').val();
+
+                if ((document.body.scrollHeight == document.body.scrollTop + window.innerHeight) && noMorePosts == 'false') {
+                    $('#loading').show();
+
+                    var ajaxReq = $.ajax({
+                        url: "includes/handlers/ajax_load_profile_posts.php",
+                        type: "POST",
+                        data: "page=" + page + "&userLoggedIn=" + userLoggedIn + "&profileUsername=" + profileUsername,
+                        cache:false,
+
+                        success: function(response){
+                            $('.posts_area').find('.nextPage').remove(); // removes current .nextpage
+                            $('.posts_area').find('.noMorePosts').remove(); // removes current .nextpage
+                            $('#loading').hide();
+                            $('.posts_area').append(response);
+                        }
+                    });
+
+                } // End if
+
+                return false;
+            }); // End (window).scroll(fnction())
+
+
+        });
+    </script>
 
 
     </div> <!-- this is the wrapper tag that's opened in header -->
