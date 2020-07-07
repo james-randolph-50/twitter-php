@@ -219,3 +219,13 @@ nav a:hover {
     margin:7px 0;
     color:#fff;
 }
+
+#accept_button,
+#ignore_button {
+    width:20%;
+    height:30px;
+    margin: .5em;
+}
+
+#ignore_button {background: #e74c3c;}
+#accept_button {background: #2ecc71;}
