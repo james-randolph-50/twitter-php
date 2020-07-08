@@ -249,3 +249,17 @@ nav a:hover {
 .profile_info_bottom {
     margin: 8px;
 }
+
+#message_textarea  {
+    width: 80%;
+    margin-right:.5em;
+}
+
+#message_submit  {
+    height: 3em;
+    width: 6em;
+    margin: 0;
+    position: absolute;
+    border:none;
+    color:#fff;
+}
