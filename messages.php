@@ -35,5 +35,23 @@ if($user_to != "new")
             if($user_to  != "new")
                 echo("<h4>You and <a href='$user_to'>" . $user_to_obj->getFirstAndLastName() . "</a></h4><hr><br>");
         ?>
+
+        <div class="loaded_messages">
+            <form action="" method="POST">
+                <?
+                    if($user_to ==  "new") {
+                        echo("Select the friend you'd like to message <br><br>");
+                        echo("To: <input type='text' >");
+                        echo("<div class='results'></div>");
+                    }
+                    else {
+                        echo("<textarea name='message_body' id='message_textarea' placeholder='Write your message...'></textarea>");
+                        echo("<input type='submit' name='post_message' class='info' id='message_submit' value='Send'>");
+                    }
+
+                ?>
+            
+            </form>
+        </div>
     
     </div>
