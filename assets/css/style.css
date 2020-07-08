@@ -285,3 +285,11 @@ nav a:hover {
     float:left;
     margin-bottom: 5px;
 }
+
+.loaded_messages {
+    height:65%;
+    min-height:60px;
+    max-height: 400px;
+    overflow: scroll;
+    margin-bottom: .8em;
+}
