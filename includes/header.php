@@ -22,8 +22,14 @@ else {
 <script src="assets/js/bootstrap.js"></script>
 <script src="assets/js/bootbox.min.js"></script>
 <script src="assets/js/twitter.js"></script>
+<script src="assets/js/jcrop_bits.js"></script>
+<script src="assets/js/jquery.Jcrop.js"></script>
+
+
+<link rel="stylesheet" href="assets/css/jquery.Jcrop.css" type="text/css" />
 <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 </head>
 <body>
 
