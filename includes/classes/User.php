@@ -112,7 +112,7 @@ class User {
 
         $query  = mysqli_query($this->con, "SELECT friend_array FROM users WHERE username='$user_to_check'");
         $row = mysqli_fetch_array($query);
-        $user_to_check_array = row['friend_array'];
+        $user_to_check_array = $row['friend_array'];
         $user_to_check_array_explode = explode(",", $user_to_check_array);
 
         foreach($user_array_explode as $i) {
@@ -122,11 +122,9 @@ class User {
                 if($i == $j && $i != "") {
                     $mutualFriends++;
                 }
-
             }
-            return $mutualFriends;
         }
-
+            return $mutualFriends;
     }
 
 

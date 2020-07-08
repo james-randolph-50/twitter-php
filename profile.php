@@ -75,6 +75,15 @@ if(isset($_GET['profile_username'])) {
         </form>
         <input type="submit" class="info" data-toggle="modal" data-target="#post_form" value="Post Something">
 
+
+        <?
+        if($userLoggedIn != $username) {
+            echo('<div class="profile_info_bottom">');
+            echo($logged_in_user_obj->getMutualFriends($username) . " mutual friends");
+            echo('</div>');
+        }
+
+        ?>
     </div>
 
     <div class="profile_main_column column">
