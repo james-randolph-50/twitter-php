@@ -245,3 +245,7 @@ nav a:hover {
     width: 70%;
     z-index: -1;
 }
+
+.profile_info_bottom {
+    margin: 8px;
+}
