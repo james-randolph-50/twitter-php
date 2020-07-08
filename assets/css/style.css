@@ -263,3 +263,25 @@ nav a:hover {
     border:none;
     color:#fff;
 }
+
+.message {
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: inline-block;
+    color: #fff;
+}
+
+.message#blue {
+    background: blue;
+    border-color:blue;
+    float:right;
+    margin-bottom: 5px;
+}
+
+.message#green {
+    background: green;
+    border-color: green;
+    float:left;
+    margin-bottom: 5px;
+}
