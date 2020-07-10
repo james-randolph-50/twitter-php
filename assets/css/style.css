@@ -293,3 +293,26 @@ nav a:hover {
     overflow: scroll;
     margin-bottom: .8em;
 }
+
+.loaded_conversations {
+    max-height:216px;
+    overflow: scroll;
+}
+
+.user_found_messages {
+    border-bottom: 1px solid #f1f1f1;
+    padding: 8px 8px 10px 8px;
+}
+
+.user_found_messages:hover {
+    background:#f1f1f1;
+}
+
+.user_found_messages img {
+    height:3em;
+    float:left;
+}
+
+#grey {
+    color: #8c8c8c;
+}
