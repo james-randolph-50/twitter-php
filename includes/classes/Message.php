@@ -148,6 +148,10 @@ class Message {
         foreach($convos as $username) {
             $user_found_obj = new User($this->con, $username);
             $latest_message_details = $this->getLatestMessage($userLoggedIn, $username);
+
+            $dots = (strlen($latest_message_details[1]) >= 12) ? "..." : "";
+            $split = str_split($latest_message_details[1], 12);
+            $split = $split[0] . $dots;
         }
     }
 
