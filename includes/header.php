@@ -44,7 +44,7 @@ else {
             <? echo($user['first_name']); ?>
         </a>
         <a href="index.php">Home</a>
-        <a href="#">Messages</a>
+        <a href="messages.php">Messages</a>
         <a href="requests.php">Requests</a>
         <a href="#">Settings</a>
         <a href="includes/handlers/logout.php">Logout</a>

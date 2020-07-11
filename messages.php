@@ -58,7 +58,7 @@ if(isset($_POST['post_message'])) {
                 <?
                     if($user_to ==  "new") {
                         echo("Select the friend you'd like to message <br><br>");
-                        echo("To: <input type='text' >");
+                        echo("To: <input type='text' onkeyup='getUsers(this.value, <? echo $userLoggedIn; ?>)' name='q' placeholder='Name' autocomplete='off' id='search_text_input'>");
                         echo("<div class='results'></div>");
                     }
                     else {
