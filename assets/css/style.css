@@ -316,3 +316,34 @@ nav a:hover {
 #grey {
     color: #8c8c8c;
 }
+
+.resultDisplay {
+    padding: 5px 5px 0px 5px;
+    height: 4em;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.resultDisplay a {
+    float: none;
+}
+.resultDisplay:hover {
+    background: #EBEBEB;
+    text-decoration: none;
+}
+
+.liveSearchProfilePic img {
+    height:3em;
+    border-radius:25px;
+    margin: 1px 12px 0 2px;
+    float:left;
+}
+
+.liveSearchText {
+    background: transparent;
+    color: blue;
+}
+
+.liveSearchText p {
+    margin-left: .7em;
+    font-size: .8em;
+}
