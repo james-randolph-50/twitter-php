@@ -87,9 +87,28 @@ if(isset($_GET['profile_username'])) {
     </div>
 
     <div class="profile_main_column column">
-    <div class="posts_area"></div>
-        <img id="loading" src="assets/images/icons/loading.png" alt="loading icon">
 
+    <ul class="nav nav-tabs" role="tablist" id="profileTabs">
+        <li class="active">
+            <a href="#newsfeed_div" aria-controls="newsfeed_div" role="tab" data-toggle="tab">Newsfeed</a>
+        </li>
+        <li><a href="#about_div" aria-controls="about_div" role="tab" data-toggle="tab">About</a></li>
+        <li><a href="#messages_div" aria-controls="messages_div" role="tab" data-toggle="tab">Messages</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade in active" id="newsfeed_div">
+            <div class="posts_area"></div>
+            <img id="loading" src="assets/images/icons/loading.png" alt="loading icon">
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="about_div">
+
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="messages_div">
+
+        </div>
+    
     </div>
 
 
