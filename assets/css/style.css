@@ -347,3 +347,7 @@ nav a:hover {
     margin-left: .7em;
     font-size: .8em;
 }
+
+.tab-content {
+    margin-top:1em;
+}

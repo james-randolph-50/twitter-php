@@ -77,8 +77,6 @@ if(isset($_POST['post_message'])) {
             var div = document.getElementById("scroll_messages");
             div.scrollTop = div.scrollHeight;
         </script>
-
-
     
     </div>
 
