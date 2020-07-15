@@ -44,11 +44,16 @@ else {
             <? echo($user['first_name']); ?>
         </a>
         <a href="index.php">Home</a>
-        <a href="messages.php">Messages</a>
+        <a href="javascript:void(0);" onclick="getDropdowndata(<? echo $userLoggedIn; ?>, 'message')">Messages</a>
         <a href="requests.php">Requests</a>
         <a href="#">Settings</a>
         <a href="includes/handlers/logout.php">Logout</a>
     </nav>
+
+    <div class="dropwdown_data_window">
+        <input type="hidden" id="dropdown_data_type" value="">
+    </div>
+
 </div>
 
 <div class="wrapper"><!-- closed in index -->    
