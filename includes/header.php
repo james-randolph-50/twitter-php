@@ -50,7 +50,7 @@ else {
         <a href="includes/handlers/logout.php">Logout</a>
     </nav>
 
-    <div class="dropwdown_data_window">
+    <div class="dropdown_data_window">
         <input type="hidden" id="dropdown_data_type" value="">
     </div>
 

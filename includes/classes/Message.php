@@ -203,7 +203,7 @@ class Message {
 
             $is_unread_query = mysqli_query($this->con, "SELECT opened FROM messages WHERE user_to='$userLoggedIn' AND  user_from='$username' ORDER BY id DESC");
             $row = mysqli_fetch_array($is_unread_query);
-            $style = ($row['opened'] == 'no') ? "background: #ddedff;" : "";
+            $style = (isset($row['opened']) && $row['opened'] == 'no') ? "background: #ddedff;" : "";
 
             $user_found_obj = new User($this->con, $username);
             $latest_message_details = $this->getLatestMessage($userLoggedIn, $username);
@@ -212,7 +212,8 @@ class Message {
             $split = str_split($latest_message_details[1], 12);
             $split = $split[0] . $dots;
 
-            $return_string .= "<a href='messages.php?u=$username'><div class='user_found_messages'>
+            $return_string .= "<a href='messages.php?u=$username'>
+            <div class='user_found_messages' style='" . $style .  "'>
                                 <img src='" . $user_found_obj->getProfilePic() . "' style='margin-right:5px;'>
                                 " . $user_found_obj->getFirstAndLastName() . "
                                 <span class='timestamp_smaller' id='grey'> " . $latest_message_details[2] . "</span>
@@ -220,6 +221,14 @@ class Message {
                                 </div>
                                 </a>";
         }
+
+
+        // if posts were loaded
+        if($count > $limit)
+            $return_string .= "<input type='hidden' class='nextPageDropDownData' value='" . ($page + 1) . "'><input type='hidden' class='noMoreDropdownData' value='false'";
+        else
+            "<input type='hidden' class='noMoreDropdownData' value='true'> <p style='text-align: center;'>No more messages to load</p>";
+
 
         return $return_string;
     }
