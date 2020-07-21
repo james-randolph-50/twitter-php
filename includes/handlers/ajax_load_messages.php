@@ -6,6 +6,6 @@ include("../classes/Message.php");
 $limit = 7; // numb of messages to load
 
 $message = new Message($con, $_REQUEST['userLoggedIn']);
-echo $message->getConvosDropdown($_REQUEST, $limit);
+echo($message->getConvosDropdown($_REQUEST, $limit));
 
 ?>
