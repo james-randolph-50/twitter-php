@@ -351,3 +351,14 @@ nav a:hover {
 .tab-content {
     margin-top:1em;
 }
+
+.dropdown_data_window {
+    background: #fff;
+    height: 280px;
+    padding:0px;
+    width:300px;
+    position: absolute;
+    right: 10px;
+    top:40px;
+    overflow: scroll;
+}
