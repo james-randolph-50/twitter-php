@@ -361,4 +361,5 @@ nav a:hover {
     right: 10px;
     top:40px;
     overflow: scroll;
+    box-shadow: 0 0 4px #000;
 }
