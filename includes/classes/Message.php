@@ -174,7 +174,7 @@ class Message {
         if($page == 1)
             $start = 0;
         else
-            $start = ($page - 1) * limit;
+            $start = ($page - 1) * $limit;
 
         $set_viewed_query = mysqli_query($this->con, "UPDATE messages SET viewed='yes' WHERE user_to='$userLoggedIn'");
 
@@ -225,12 +225,18 @@ class Message {
 
         // if posts were loaded
         if($count > $limit)
-            $return_string .= "<input type='hidden' class='nextPageDropDownData' value='" . ($page + 1) . "'><input type='hidden' class='noMoreDropdownData' value='false'";
+            $return_string .= "<input type='hidden' class='nextPageDropdownData' value='" . ($page + 1) . "'><input type='hidden' class='noMoreDropdownData' value='false'";
         else
             "<input type='hidden' class='noMoreDropdownData' value='true'> <p style='text-align: center;'>No more messages to load</p>";
 
 
         return $return_string;
+    }
+
+    public function getUnreadNumber() {
+        $userLoggedIn = $this->user_obj->getUsername();
+        $query = mysqli_query($this->con, "SELECT * FROM messages WHERE viewed='no' AND user_to='$userLoggedIn'");
+        return mysqli_num_rows($query);
     }
 
 
