@@ -363,3 +363,19 @@ nav a:hover {
     overflow: scroll;
     box-shadow: 0 0 4px #000;
 }
+
+.notification_badge {
+    padding: 3px 7px;
+    font-size: .8em;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background: red;
+    border-radius: 10px;
+    position: absolute;
+    right: 1px;
+    top: -7px;
+}
