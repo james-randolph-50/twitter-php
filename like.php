@@ -52,7 +52,7 @@ form {position:absolute;top:0;}
         // Insert notification
         if($user_liked != $userLoggedIn) {
             $notification = new Notification($con, $userLoggedIn);
-            $notification->insertNotification($post_id, $user_to, "like");
+            $notification->insertNotification($post_id, $user_liked, "like");
         }
     }
 
