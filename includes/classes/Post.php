@@ -434,6 +434,10 @@ public function loadProfilePosts($data, $limit) {
             $returned_id = mysqli_insert_id($this->con);
 
             // insert notification
+            if($user_to !=  'none') {
+                $notification = new Notification($this->con, $userLoggedIn);
+                $notification->insertNotification($returned_id, $user_to, "profile_post");
+            }
 
             //Update post count for user
             $num_posts = $this->user_obj->getNumPosts();
