@@ -42,12 +42,26 @@
     $row = mysqli_fetch_array($user_query);
 
     $posted_to = $row['added_by'];
+    $user_to = $row['user_to'];
 
     if(isset($_POST['postComment' . $post_id])) {
         $post_body = $_POST['post_body'];
         $post_body = mysqli_escape_string($con, $post_body);
         $date_time_now = date("Y-m-d H:i:s");
         $insert_post = mysqli_query($con, "INSERT INTO  comments VALUES(NULL, '$post_body', '$userLoggedIn','$posted_to','$date_time_now','no', '$post_id')");
+
+        if($posted_to != $userLoggedIn) {
+            $notification = new Notification($this->con, $userLoggedIn);
+            $notification->insertNotification($post_id, $posted_to, "comment");
+        } 
+        
+        if ($user_to != 'none' && $user_to != $userLoggedIn) {
+            $notification = new Notification($this->con, $userLoggedIn);
+            $notification->insertNotification($post_id, $user_to, "profile_comment");        
+        }
+
+
+
         echo("<p>Comment posted.</p>");
     }
 
@@ -64,7 +78,7 @@
     $get_comments = mysqli_query($con, "SELECT * FROM comments WHERE post_id='$post_id' ORDER BY id ASC");
     $count = mysqli_num_rows($get_comments);
 
-    if  ($count != 0) {
+    if ($count != 0) {
         while($comment = mysqli_fetch_array($get_comments)) {
 
             $comment_body = $comment['post_body'];
