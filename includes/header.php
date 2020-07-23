@@ -46,18 +46,27 @@ else {
         // unread messages
         $messages = new Message($con, $userLoggedIn);
         $num_messages = $messages->getUnreadNumber();
+
+        // unread notifications
+        $notifications = new Notification($con, $userLoggedIn);
+        $num_notification = $notifications->getUnreadNumber();
     ?>
         <a href="<? echo($userLoggedIn); ?>">
             <? echo($user['first_name']); ?>
         </a>
         <a href="index.php">Home</a>
         <a href="javascript:void(0);" onclick="getDropdownData('<? echo $userLoggedIn; ?>', 'message')">Messages
-        <? if($num_messages > 0)
-            echo '<span class="notification_badge" id="unread_message">' . $num_messages . '</span>';
+            <? if($num_messages > 0)
+                echo '<span class="notification_badge" id="unread_message">' . $num_messages . '</span>';
             ?>
         </a>
         <a href="requests.php">Requests</a>
         <a href="#">Settings</a>
+        <a href="javascript:void(0);" onclick="getDropdownData('<? echo $userLoggedIn; ?>', 'notification')">Notifications            
+            <? if($num_notification > 0)
+                echo '<span class="notification_badge" id="unread_notification">' . $num_notification . '</span>';
+            ?>
+        </a>
         <a href="includes/handlers/logout.php">Logout</a>
     </nav>
 
