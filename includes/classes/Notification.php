@@ -39,6 +39,9 @@ class Notification {
                 break;
         }
 
+        $link = "post.php?id=" . $post_id;
+
+        $insert_query = mysqli_query($this->con, "INSERT INTO notifications VALUES(NULL, '$user_to', '$userLoggedIn', '$message', '$link', '$date_time', 'no', 'no')");
 
     }
 
