@@ -119,10 +119,12 @@ class Notification {
             $style = (isset($row['opened']) && $row['opened'] == 'no') ? "background: #ddedff;" : "";
 
             $return_string .= "<a href='" . $row['link'] . "'>
-                                    <div class='notificationsProfilePic'>
-                                        <img src='" . $user_data['profile_pic'] . "'>
+                                    <div class='resultDisplay resultDisplayNotification' style='" . $style  . "'>
+                                        <div class='notificationsProfilePic'>
+                                            <img src='" . $user_data['profile_pic'] . "'>
+                                        </div>
+                                        <p class='timestamp_smaller' id='grey'>" . $time_message . "</p>" . $row['message']  .  "
                                     </div>
-                                    <p class='timestamp_smaller' id='grey'>" . $time_message . "</p>" . $row['message']  .  "
                                 </a>";
         }
 
