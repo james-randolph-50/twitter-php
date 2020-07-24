@@ -446,6 +446,8 @@ public function submitPost($body,$user_to){
 public function getSinglePost($post_id) {
         $userLoggedIn  = $this->user_obj->getUsername();
 
+        $opened_query = mysqli_query($this->con, "UPDATE notifications SET opened='yes' WHERE user_to='$userLoggedIn' AND link LIKE '%=$post_id'");
+
         $str = ""; //string to return
         $data_query = mysqli_query($this->con, "SELECT * FROM posts WHERE deleted='no' AND id='$post_id'");
 
