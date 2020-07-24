@@ -50,6 +50,10 @@ else {
         // unread notifications
         $notifications = new Notification($con, $userLoggedIn);
         $num_notification = $notifications->getUnreadNumber();
+
+        // unread notifications
+        $user_obj = new User($con, $userLoggedIn);
+        $num_requests = $user_obj->getNumberOfFriendRequests();
     ?>
         <a href="<? echo($userLoggedIn); ?>">
             <? echo($user['first_name']); ?>
@@ -60,7 +64,11 @@ else {
                 echo '<span class="notification_badge" id="unread_message">' . $num_messages . '</span>';
             ?>
         </a>
-        <a href="requests.php">Requests</a>
+        <a href="requests.php">Requests
+            <? if($num_requests > 0)
+                echo '<span class="notification_badge" id="unread_requests">' . $num_requests . '</span>';
+            ?>
+        </a>
         <a href="#">Settings</a>
         <a href="javascript:void(0);" onclick="getDropdownData('<? echo $userLoggedIn; ?>', 'notification')">Notifications            
             <? if($num_notification > 0)
