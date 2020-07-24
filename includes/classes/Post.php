@@ -447,7 +447,7 @@ public function getSinglePost($post_id) {
         $userLoggedIn  = $this->user_obj->getUsername();
 
         $str = ""; //string to return
-        $data_query = mysqli_query($this->con, "SELECT * FROM posts WHERE deleted='no' AND post_id='$post_id' ORDER BY id DESC");
+        $data_query = mysqli_query($this->con, "SELECT * FROM posts WHERE deleted='no' AND id='$post_id'");
 
         if(mysqli_num_rows($data_query) > 0) {
 
