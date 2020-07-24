@@ -1,6 +1,6 @@
 <?php
 include("../../config/config.php");
-include("../../classes/User.php");
+include("../../includes/classes/User.php");
 
 $query = $_POST['query'];
 $userLoggedIn = $_POST['userLoggedIn'];
@@ -42,7 +42,7 @@ if($query != "") {
                         </div>
                     </a>
             
-            </div>"
+            </div>";
     }
 }
 ?>
