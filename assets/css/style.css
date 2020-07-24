@@ -396,3 +396,30 @@ nav a:hover {
     font-size: 85%;
     margin:0;
 }
+
+.search {
+    margin: .5em 0 0 15%;
+}
+
+.search #search_text_input {
+    float: left;
+    height: 1.5em;
+    outline: 0 ;
+    width: 100px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.button_holder {
+    background: #f1f1f1;
+    cursor: pointer;
+    float:left;
+    height: 1.5em;
+    text-align:center;
+    width:50px;
+}
+
+.button_holder img {
+    margin: 1px;
+    width: 1.4em;
+}
