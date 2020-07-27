@@ -423,3 +423,24 @@ nav a:hover {
     margin: 1px;
     width: 1.4em;
 }
+
+.search_results {
+    background: #fff;
+    margin-top:21px;
+    
+}
+
+.resultDisplay img {
+    width: 4em;
+}
+
+.search_results_footer {
+    padding: 5px 4px 0px 4px;
+    height:20px;
+    background: #fff;
+    color:blue;
+}
+
+.search_results_footer a {
+    color: blue;
+}
