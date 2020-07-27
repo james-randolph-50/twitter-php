@@ -96,7 +96,7 @@ function getLiveSearchUsers(value, user) {
 		}
 
 		$('.search_results').html(data);
-		$('.search_results_footer').html("<a href='search.php?q='" + value + "'>See All Results</a>");
+		$('.search_results_footer').html("<a href='search.php?q=" + value + "'>See All Results</a>");
 
 		if(data == "") {
 			$('search_results_footer').html("");
