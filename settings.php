@@ -40,6 +40,8 @@ include("includes/form_handlers/settings_handler.php");
         Old Password: <input type="password" name="old_password"><br>
         New Password: <input type="password" name="new_password_1"><br>
         New Password Confirmation: <input type="password" name="new_password_2"><br>
+        <? echo $password_message; ?>
+
         <input type="submit" name="update_password" id="close_account" value="update password"><br>
 
     </form>
