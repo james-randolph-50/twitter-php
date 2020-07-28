@@ -57,4 +57,8 @@ else {
     $password_message  = "";    
 }
 
+if(isset($_POST['closed_account'])) {
+    header("Location: close_account.php");
+}
+
 ?>
