@@ -40,10 +40,29 @@ else {
                     $usersReturnedQuery = mysqli_query($con, "SELECT * FROM users WHERE (first_name LIKE '$names[0]%' AND last_name LIKE '$names[1]%') AND user_closed='no'");
                 else 
                     $usersReturnedQuery = mysqli_query($con, "SELECT * FROM users WHERE (first_name LIKE '$names[0]%' OR last_name LIKE '$names[0]%') AND user_closed='no'");
-    
                
             }
 
+            //Check if results were found
+            if(mysqli_num_rows($usersReturnedQuery) == 0)
+                echo  "Can't find anyone with a " . $type . " like: " .$query;
+            else
+                echo mysqli_num_rows($usersReturnedQuery) . " results found: <br><br>";
+
+
+            echo "<p id='grey'>Try searching for:</p>";
+            echo "<a href='search.php?q=" . $query ."&type=name'>Names</a>, <a href='search.php?q=" . $query ."&type=username'>Usernames</a><br><br><hr>";
+
+            while($row = mysqli_fetch_array($usersReturnedQuery)) {
+                $user_obj = new User($con, $user['username']);
+
+                $button = "";
+                $mutual_friends = "";
+
+                if($user['username'] != $row['username']) {
+                    
+                }
+            }
         }
 
     ?>
