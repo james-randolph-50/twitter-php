@@ -51,7 +51,7 @@ else {
 
 
             echo "<p id='grey'>Try searching for:</p>";
-            echo "<a href='search.php?q=" . $query ."&type=name'>Names</a>, <a href='search.php?q=" . $query ."&type=username'>Usernames</a><br><br><hr>";
+            echo "<a href='search.php?q=" . $query ."&type=name'>Names</a>, <a href='search.php?q=" . $query ."&type=username'>Usernames</a><br><br><hr id='search_hr'>";
 
             while($row = mysqli_fetch_array($usersReturnedQuery)) {
                 $user_obj = new User($con, $user['username']);
@@ -79,7 +79,7 @@ else {
 
                 }
 
-                echo "<div class='search_result'
+                echo "<div class='search_result'>
                         <div class='searchPageFriendButtons'>
                             <form action='' method='POST'>
                                     " . $button . "
@@ -99,7 +99,7 @@ else {
 
                 
                 </div>
-                <hr>";
+                <hr id='search_hr'>";
 
             } // end while
         }

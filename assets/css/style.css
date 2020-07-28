@@ -444,3 +444,21 @@ nav a:hover {
 .search_results_footer a {
     color: blue;
 }
+
+.search_result {
+    padding:10px;
+    height: 100px;
+}
+
+.searchPageFriendButtons {
+    float:right;
+}
+
+.result_profile_pic {
+    float: left;
+    margin-right: .5em;
+}
+
+#search_hr {
+    margin-bottom:0px;
+}
