@@ -454,6 +454,12 @@ nav a:hover {
     float:right;
 }
 
+.searchPageFriendButtons input[type="submit"] {
+    border: none;
+    padding:.5em .75em;
+    color: #fff;
+}
+
 .result_profile_pic {
     float: left;
     margin-right: .5em;
