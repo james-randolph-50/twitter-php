@@ -84,7 +84,7 @@ else {
                 echo '<span class="notification_badge" id="unread_requests">' . $num_requests . '</span>';
             ?>
         </a>
-        <a href="#">Settings</a>
+        <a href="settings.php">Settings</a>
         <a href="javascript:void(0);" onclick="getDropdownData('<? echo $userLoggedIn; ?>', 'notification')">Notifications            
             <? if($num_notification > 0)
                 echo '<span class="notification_badge" id="unread_notification">' . $num_notification . '</span>';

@@ -67,7 +67,7 @@ else {
                     else if($user_obj->didReceiveRequest($row['username']))
                         $button = "<input type='submit' name='" . $row['username'] . "'  class='warning' value='Respond to Request'>";
                     else if($user_obj->didSendRequest($row['username']))
-                        $button = "<input class='default' value='Request Sent'>";
+                        $button = "<input type='submit' class='default' value='Request Sent'>";
                     else
                         $button = "<input type='submit' name='" . $row['username'] . "'  class='success' value='Add Friend'>";
 
