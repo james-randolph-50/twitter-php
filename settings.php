@@ -11,4 +11,13 @@ include("includes/header.php");
     <br>
     <a href="upload.php">Upload new profile picture</a><br><br><br>
 
+    Modify the values and click 'Update Details'
+
+    <form action="settings.php" method="POST">
+        First Name: <input type="text" name="first_name" value="<? echo $user['first_name'] ?>"><br>
+        Last Name: <input type="text" name="last_name" value="<? echo $user['last_name'] ?>"><br>
+        Email: <input type="text" name="email" value="<? echo $user['email'] ?>"><br>
+
+    </form>
+
 </div>
